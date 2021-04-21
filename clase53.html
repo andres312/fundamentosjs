@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>   
+        const andres = {
+            nombre: 'andres',
+            apellido: 'rodriguez',
+            edad: 34
+        }
+
+        const pedro = {
+            nombre: 'pedro',
+            apellido: 'rodriguez',
+            edad: 32
+        }
+
+        function saludar(saludo = 'hola'){
+            console.log(`${saludo} mi nombre es ${this.nombre}`)
+        }
+
+        // function saludar(){
+        //     console.log(`Hola mi nombre es ${this.nombre}`)
+        // }
+
+        // const saludarAAndres = saludar.bind(andres)
+        // const saludarAPedro = saludar.bind(pedro)
+        // setTimeout(saludar.bind(andres,'Hola che'), 1000);
+
+        saludar.bind(andres) // no ejecuta
+        saludar.call(andres, 'Hola weon') // se ejecuta, quien es this, parametros con coma
+        saludar.apply(andres, ['Hola wey']) // diferencia es parametros son array
+    </script>
+</body>
+</html>
+
+
+

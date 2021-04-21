@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var andres = {
+            nombre: 'andres',
+            apellido: 'rodriguez',
+            edad: 34,            
+        }
+
+        function esMayorDeEdad(persona) {
+            let mensaje
+            const MAYORIA_EDAD = 18
+
+            if (persona.edad >= MAYORIA_EDAD) {
+                mensaje = 'si es  mayor'
+            } else {
+                mensaje = 'no es  mayor'                
+            }
+            console.log(mensaje)            
+        }
+
+        const numeros = [1,2,3,4]
+        for (let i = 0; i< numeros.length; i++) {
+            console.log(i)
+        }
+        console.log(`el valor de i es ${i}`)
+        //esMayorDeEdad(andres)
+    </script>
+</body>
+</html>
